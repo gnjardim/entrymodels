@@ -1,3 +1,12 @@
+#' Build our auxiliary matrices to estimate entry models
+#'
+#' @param data A \code{data.frame} object containing your data
+#' @param y A string indicating the outcome variable
+#' @param max An \code{integer} indicating the maximum number of competitors
+#' @return A list of the auxiliary matrices
+#'
+#' @importFrom dplyr select
+#' @importFrom magrittr %>%
 aux_matrix <- function(data, y, max) {
 
     # get observations
@@ -10,7 +19,7 @@ aux_matrix <- function(data, y, max) {
     N <- rep(0, n)
 
     # get y variable
-    n_ag <- data %>% select(y)
+    n_ag <- data %>% dplyr::select(y)
 
     for (i in 1:(N_max-1)){
         N[n_ag == i] <- i
