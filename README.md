@@ -6,7 +6,6 @@
 <!-- badges: start -->
 
 ![CRAN version](https://www.r-pkg.org/badges/version/entrymodels)
-![License](https://img.shields.io/github/license/gnjardim/entrymodels)
 [![Travis build
 status](https://travis-ci.org/gnjardim/entrymodels.svg?branch=master)](https://travis-ci.org/gnjardim/entrymodels)
 <!-- badges: end -->
