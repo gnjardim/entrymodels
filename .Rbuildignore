@@ -3,4 +3,3 @@
 ^LICENSE\.md$
 ^README\.Rmd$
 ^revdep$
-^\.travis\.yml$
