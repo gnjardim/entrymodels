@@ -11,6 +11,7 @@
 #' @return The function to be optimized
 #'
 #' @import stats
+
 br1 <- function(params, n, N_max, l_params, A1, A2, S, N){
 
     ml <- rep(0, n)

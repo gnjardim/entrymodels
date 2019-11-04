@@ -8,6 +8,7 @@
 #'
 #' @importFrom dplyr select
 #' @importFrom magrittr %>%
+
 aux_matrix <- function(data, y, N_max, n) {
 
     # auxiliary matrix A1

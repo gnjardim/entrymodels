@@ -16,6 +16,7 @@
 #' tb <- load_example_data()
 #' em <- em_basic(tb, "Populacao", "n_agencias")
 #' @export
+
 em_basic <- function(data, Sm, y, N_max = 5) {
 
     ### to tibble
