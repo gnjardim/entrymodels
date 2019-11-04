@@ -3,7 +3,7 @@
 #' @param data A \code{data.frame} object containing your data
 #' @param Sm A string indicating the market size variable, present in \code{data}
 #' @param y A string indicating the outcome variable, present in \code{data}
-#' @param max An \code{integer} indicating the maximum number of competitors
+#' @param max An \code{integer} indicating the maximum number of competitors. Defaults to ``5``.
 #' @return A tibble of the critical market sizes, as explained in Bresnahan and Reiss (1991)
 #'
 #' @export
