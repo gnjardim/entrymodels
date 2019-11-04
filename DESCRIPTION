@@ -11,5 +11,7 @@ LazyData: true
 Imports: 
     stats,
     magrittr,
-    dplyr
+    dplyr,
+    rlang,
+    readr
 RoxygenNote: 6.1.1

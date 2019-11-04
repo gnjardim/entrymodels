@@ -4,7 +4,7 @@
 \alias{em_basic}
 \title{Estimate our (basic) entry model with only one variable for the market size}
 \usage{
-em_basic(data, Sm, y, max = 5)
+em_basic(data, Sm, y, N_max = 5)
 }
 \arguments{
 \item{data}{A \code{data.frame} object containing your data}
@@ -13,11 +13,16 @@ em_basic(data, Sm, y, max = 5)
 
 \item{y}{A string indicating the outcome variable, present in \code{data}}
 
-\item{max}{An \code{integer} indicating the maximum number of competitors}
+\item{N_max}{An \code{integer} indicating the maximum number of competitors. Defaults to ``5``.}
 }
 \value{
 A tibble of the critical market sizes, as explained in Bresnahan and Reiss (1991)
 }
 \description{
 Estimate our (basic) entry model with only one variable for the market size
+}
+\examples{
+
+tb <- load_example_data()
+em <- em_basic(tb, "Populacao", "n_agencias")
 }

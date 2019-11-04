@@ -2,33 +2,15 @@
 #'
 #' @param data A \code{data.frame} object containing your data
 #' @param y A string indicating the outcome variable
-#' @param max An \code{integer} indicating the maximum number of competitors
+#' @param N_max An \code{integer} indicating the maximum number of competitors
+#' @param n Number of observations in \code{data}
 #' @return A list of the auxiliary matrices
 #'
 #' @importFrom dplyr select
 #' @importFrom magrittr %>%
-aux_matrix <- function(data, y, max) {
+aux_matrix <- function(data, y, N_max, n) {
 
-    # get observations
-    n <- nrow(data)
-
-    # maximum number
-    N_max <- max
-
-    # number per market
-    N <- rep(0, n)
-
-    # get y variable
-    n_ag <- data %>% dplyr::select(y)
-
-    for (i in 1:(N_max-1)){
-        N[n_ag == i] <- i
-    }
-
-    N[n_ag >= N_max] <- N_max
-
-    # auxiliary matrix
-
+    # auxiliary matrix A1
     A1 <- (-1)*matrix(1, nrow = N_max, ncol = N_max, byrow = TRUE)
 
     for (i in 1:N_max){
@@ -43,6 +25,7 @@ aux_matrix <- function(data, y, max) {
         }
     }
 
+    # auxiliary matrix A2
     A2 <- matrix(1, nrow = N_max, ncol = N_max, byrow = TRUE)
 
     for (i in 1:N_max){

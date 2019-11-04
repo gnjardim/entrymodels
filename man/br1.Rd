@@ -4,16 +4,16 @@
 \alias{br1}
 \title{Build our optimization function}
 \usage{
-br1(params, n, N_max, params0, A1, A2, S, N)
+br1(params, n, N_max, l_params, A1, A2, S, N)
 }
 \arguments{
 \item{params}{Parameters to construct function}
 
-\item{n}{Number of observations}
+\item{n}{Number of observations in \code{data}}
 
 \item{N_max}{An \code{integer} indicating the maximum number of competitors}
 
-\item{params0}{Container for parameters}
+\item{l_params}{Length of parameters vector}
 
 \item{A1}{Auxiliary matrix A1}
 
@@ -21,10 +21,10 @@ br1(params, n, N_max, params0, A1, A2, S, N)
 
 \item{S}{Size of the market}
 
-\item{N}{An \code{integer} indicating the competitor}
+\item{N}{Vector of zeros}
 }
 \value{
-A list of the auxiliary matrices
+The function to be optimized
 }
 \description{
 Build our optimization function

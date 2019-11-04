@@ -4,14 +4,16 @@
 \alias{aux_matrix}
 \title{Build our auxiliary matrices to estimate entry models}
 \usage{
-aux_matrix(data, y, max)
+aux_matrix(data, y, N_max, n)
 }
 \arguments{
 \item{data}{A \code{data.frame} object containing your data}
 
 \item{y}{A string indicating the outcome variable}
 
-\item{max}{An \code{integer} indicating the maximum number of competitors}
+\item{N_max}{An \code{integer} indicating the maximum number of competitors}
+
+\item{n}{Number of observations in \code{data}}
 }
 \value{
 A list of the auxiliary matrices
