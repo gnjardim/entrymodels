@@ -1,3 +1,4 @@
+#' @title Basic Entry Model
 #' Estimate our (basic) entry model with only one variable for the market size
 #'
 #' @param data A \code{data.frame} object containing your data
