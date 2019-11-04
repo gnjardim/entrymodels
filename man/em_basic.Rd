@@ -2,7 +2,7 @@
 % Please edit documentation in R/em_basic.R
 \name{em_basic}
 \alias{em_basic}
-\title{Estimate our (basic) entry model with only one variable for the market size}
+\title{Basic Entry Model}
 \usage{
 em_basic(data, Sm, y, N_max = 5)
 }
@@ -13,7 +13,7 @@ em_basic(data, Sm, y, N_max = 5)
 
 \item{y}{A string indicating the outcome variable, present in \code{data}}
 
-\item{N_max}{An \code{integer} indicating the maximum number of competitors. Defaults to ``5``.}
+\item{N_max}{An \code{integer} indicating the maximum number of competitors. Defaults to 5.}
 }
 \value{
 A tibble of the critical market sizes, as explained in Bresnahan and Reiss (1991)
@@ -22,7 +22,6 @@ A tibble of the critical market sizes, as explained in Bresnahan and Reiss (1991
 Estimate our (basic) entry model with only one variable for the market size
 }
 \examples{
-
 tb <- load_example_data()
 em <- em_basic(tb, "Populacao", "n_agencias")
 }
