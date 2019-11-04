@@ -1,4 +1,4 @@
-aux_matrix <- function(data, S, y, max = 5) {
+aux_matrix <- function(data, y, max = 5) {
 
     # get observations
     n <- nrow(data)
