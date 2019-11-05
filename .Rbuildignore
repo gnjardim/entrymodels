@@ -4,3 +4,5 @@
 ^README\.Rmd$
 ^revdep$
 ^\.travis\.yml$
+^CRAN-RELEASE$
+^cran-comments\.md$
