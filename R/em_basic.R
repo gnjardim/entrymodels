@@ -74,7 +74,7 @@ em_basic <- function(data, Sm, y, N_max = 5) {
 
     alpha_star_restricted1 <- A1%*%br.restricted1$par[1:N_max]
     gamma_star_restricted1 <- A2%*%br.restricted1$par[(N_max+1):(length(br.restricted1$par))]
-    S_critical_restricted1 <- dplyr::tibble(market_size     = 1:N_max,
+    S_critical_restricted1 <- dplyr::tibble(n_competitors   = 1:N_max,
                                             critical_values = exp(gamma_star_restricted1/alpha_star_restricted1)
                                             )
 
