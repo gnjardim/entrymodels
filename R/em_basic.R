@@ -48,7 +48,6 @@ em_basic <- function(data, Sm, y, N_max = 5, alpha0 = rep(0.1, N_max), gamma0 = 
     # parameters --------------------------------------------------------------
     n <- nrow(data)
     N <- rep(0, n)
-    N <- rep(0, n)
 
 
     # build N vector ----------------------------------------------------------
