@@ -4,8 +4,8 @@ Title: Estimate Entry Models
 Version: 0.1.0
 Authors@R:
     c(person("Guilherme", "Jardim", email = "gnjardim1@gmail.com", role = c("aut", "cre")), 
-	  person("Arthur", "Bragança", role = "aut"), 
-	  person("Pedro", "Fernandes", role = "aut"))
+	  person("Arthur", "Bragança", role = "ctb"), 
+	  person("Pedro", "Fernandes", role = "ctb"))
 Maintainer: Guilherme Jardim <gnjardim1@gmail.com>
 Description: Tools for measuring empirically the effects of entry in concentrated markets, based in Bresnahan and Reiss (1991). 
 License: MIT + file LICENSE

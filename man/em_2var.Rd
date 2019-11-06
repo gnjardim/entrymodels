@@ -42,3 +42,6 @@ em <- em_2var(tb, "Populacao", "RendaPerCapita", "n_agencias")
 \references{
 Bresnahan, T. F., & Reiss, P. C. (1991). Entry and competition in concentrated markets. Journal of political economy, 99(5), 977-1009.
 }
+\author{
+Guilherme N. Jardim, Department of Economics, Pontifical Catholic University of Rio de Janeiro
+}

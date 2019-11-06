@@ -32,6 +32,8 @@
 #' @references
 #' Bresnahan, T. F., & Reiss, P. C. (1991). Entry and competition in concentrated markets. Journal of political economy, 99(5), 977-1009.
 #'
+#' @author Guilherme N. Jardim, Department of Economics, Pontifical Catholic University of Rio de Janeiro
+#'
 #' @export
 
 em_2var <- function(data, Sm1, Sm2, y, N_max = 5) {

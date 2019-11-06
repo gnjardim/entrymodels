@@ -12,3 +12,6 @@ Example dataset as tibble
 \description{
 Load example dataset
 }
+\author{
+Guilherme N. Jardim, Department of Economics, Pontifical Catholic University of Rio de Janeiro
+}

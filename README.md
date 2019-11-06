@@ -44,6 +44,8 @@ Which should return something similar to:
     finding HTML links ... done
     aux_matrix                              html  
     br1                                     html  
+    br2                                     html  
+    em_2var                                 html  
     em_basic                                html  
     load_example_data                       html  
 ** building package indices
@@ -60,7 +62,9 @@ Which should return something similar to:
 Please note that you should have
 [Rtools](http://cran.r-project.org/bin/windows/Rtools/) installed.
 
-## Example
+## Examples
+
+### Basic Model
 
 This is a basic example which shows you how to estimate a basic entry
 model with our sample data.
@@ -78,4 +82,24 @@ tb <- load_example_data()
 #> 3             3              42038.
 #> 4             4              75638.
 #> 5             5             162958.
+```
+
+### Two-Variables Model
+
+This is a basic example which shows you how to estimate a two-variable
+entry model with our sample data.
+
+``` r
+library(entrymodels)
+
+tb <- load_example_data()
+(em <- em_2var(tb, "Populacao", "RendaPerCapita", "n_agencias"))
+#> # A tibble: 5 x 2
+#>   n_competitors critical_values[,1]
+#>           <int>               <dbl>
+#> 1             1               5127.
+#> 2             2              19265.
+#> 3             3              44458.
+#> 4             4              79959.
+#> 5             5             169059.
 ```
