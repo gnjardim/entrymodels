@@ -30,6 +30,36 @@ And the development version from
 devtools::install_github("gnjardim/entrymodels")
 ```
 
+Which should return something similar to:
+
+``` r
+* installing *source* package 'entrymodels' ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+  converting help for package 'entrymodels'
+    finding HTML links ... done
+    aux_matrix                              html  
+    br1                                     html  
+    em_basic                                html  
+    load_example_data                       html  
+** building package indices
+** testing if installed package can be loaded from temporary location
+*** arch - i386
+*** arch - x64
+** testing if installed package can be loaded from final location
+*** arch - i386
+*** arch - x64
+** testing if installed package keeps a record of temporary installation path
+* DONE (entrymodels)
+```
+
+Please note that you should have
+[Rtools](http://cran.r-project.org/bin/windows/Rtools/) installed.
+
 ## Example
 
 This is a basic example which shows you how to estimate a basic entry
@@ -41,11 +71,11 @@ library(entrymodels)
 tb <- load_example_data()
 (em <- em_basic(tb, "Populacao", "n_agencias"))
 #> # A tibble: 5 x 2
-#>   market_size critical_values[,1]
-#>         <int>               <dbl>
-#> 1           1               5238.
-#> 2           2              18961.
-#> 3           3              42038.
-#> 4           4              75638.
-#> 5           5             162958.
+#>   n_competitors critical_values[,1]
+#>           <int>               <dbl>
+#> 1             1               5238.
+#> 2             2              18961.
+#> 3             3              42038.
+#> 4             4              75638.
+#> 5             5             162958.
 ```
