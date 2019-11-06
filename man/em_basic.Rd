@@ -16,9 +16,9 @@ em_basic(data, Sm, y, N_max = 5, alpha0 = rep(0.1, N_max),
 
 \item{N_max}{An \code{integer} indicating the maximum number of competitors. Defaults to 5.}
 
-\item{alpha0}{A \code{vector} of type \code{numeric} and length N_max indicating the initial condition for alpha. Defaults to a vector of 0.1's.}
+\item{alpha0}{A \code{vector} of type \code{numeric} and length \code{N_max} indicating the initial condition for alpha. Defaults to a vector of 0.1's.}
 
-\item{gamma0}{A \code{vector} of type \code{numeric} and length N_max indicating the initial condition for gamma. Defaults to a vector of 1's.}
+\item{gamma0}{A \code{vector} of type \code{numeric} and length \code{N_max} indicating the initial condition for gamma. Defaults to a vector of 1's.}
 }
 \value{
 A tibble of critical market sizes, as explained in Bresnahan and Reiss (1991)

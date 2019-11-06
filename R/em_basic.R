@@ -5,8 +5,8 @@
 #' @param Sm A string indicating the market size variable, present in \code{data}
 #' @param y A string indicating the outcome variable, present in \code{data}
 #' @param N_max An \code{integer} indicating the maximum number of competitors. Defaults to 5.
-#' @param alpha0 A \code{vector} of type \code{numeric} and length N_max indicating the initial condition for alpha. Defaults to a vector of 0.1's.
-#' @param gamma0 A \code{vector} of type \code{numeric} and length N_max indicating the initial condition for gamma. Defaults to a vector of 1's.
+#' @param alpha0 A \code{vector} of type \code{numeric} and length \code{N_max} indicating the initial condition for alpha. Defaults to a vector of 0.1's.
+#' @param gamma0 A \code{vector} of type \code{numeric} and length \code{N_max} indicating the initial condition for gamma. Defaults to a vector of 1's.
 #' @return A tibble of critical market sizes, as explained in Bresnahan and Reiss (1991)
 #'
 #' @import stats
