@@ -4,7 +4,8 @@
 \alias{em_basic}
 \title{Basic Entry Model}
 \usage{
-em_basic(data, Sm, y, N_max = 5)
+em_basic(data, Sm, y, N_max = 5, alpha0 = rep(0.1, N_max),
+  gamma0 = rep(1, N_max))
 }
 \arguments{
 \item{data}{A \code{data.frame} object containing your data}
@@ -14,14 +15,37 @@ em_basic(data, Sm, y, N_max = 5)
 \item{y}{A string indicating the outcome variable, present in \code{data}}
 
 \item{N_max}{An \code{integer} indicating the maximum number of competitors. Defaults to 5.}
+
+\item{alpha0}{A \code{vector} of type \code{numeric} and length N_max indicating the initial condition for alpha. Defaults to a vector of 0.1's.}
+
+\item{gamma0}{A \code{vector} of type \code{numeric} and length N_max indicating the initial condition for gamma. Defaults to a vector of 1's.}
 }
 \value{
-A tibble of the critical market sizes, as explained in Bresnahan and Reiss (1991)
+A tibble of critical market sizes, as explained in Bresnahan and Reiss (1991)
 }
 \description{
-Estimate our (basic) entry model with only one variable for the market size
+Estimate our basic entry model with only one variable for the market size.
 }
 \examples{
+set.seed(1)
+tb <- data.frame(Sm = runif(100), y = runif(100))
+
+# estimate default model
+em_n5 <- em_basic(tb, "Sm", "y")
+
+# estimate model with 3 competitors only
+em_n3 <- em_basic(tb, "Sm", "y", N_max = 3)
+
+# estimate model with different initial conditions
+em_difc <- em_basic(tb, "Sm", "y", alpha0 = rep(0.2, 5), gamma0 = rep(1.1, 5))
+
+
+\dontrun{
 tb <- load_example_data()
 em <- em_basic(tb, "Populacao", "n_agencias")
+}
+
+}
+\references{
+Bresnahan, T. F., & Reiss, P. C. (1991). Entry and competition in concentrated markets. Journal of political economy, 99(5), 977-1009.
 }
