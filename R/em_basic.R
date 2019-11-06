@@ -1,11 +1,13 @@
 #' Basic Entry Model
-#' @description Estimate our (basic) entry model with only one variable for the market size
+#' @description Estimate our basic entry model with only one variable for the market size.
 #'
 #' @param data A \code{data.frame} object containing your data
 #' @param Sm A string indicating the market size variable, present in \code{data}
 #' @param y A string indicating the outcome variable, present in \code{data}
 #' @param N_max An \code{integer} indicating the maximum number of competitors. Defaults to 5.
-#' @return A tibble of the critical market sizes, as explained in Bresnahan and Reiss (1991)
+#' @param alpha0 A \code{vector} of type \code{numeric} and length N_max indicating the initial condition for alpha. Defaults to a vector of 0.1's.
+#' @param gamma0 A \code{vector} of type \code{numeric} and length N_max indicating the initial condition for gamma. Defaults to a vector of 1's.
+#' @return A tibble of critical market sizes, as explained in Bresnahan and Reiss (1991)
 #'
 #' @import stats
 #' @importFrom magrittr %>%
@@ -14,11 +16,30 @@
 #' @importFrom dplyr tibble
 #'
 #' @examples
+#' set.seed(1)
+#' tb <- data.frame(Sm = runif(100), y = runif(100))
+#'
+#' # estimate default model
+#' em_n5 <- em_basic(tb, "Sm", "y")
+#'
+#' # estimate model with 3 competitors only
+#' em_n3 <- em_basic(tb, "Sm", "y", N_max = 3)
+#'
+#' # estimate model with different initial conditions
+#' em_difc <- em_basic(tb, "Sm", "y", alpha0 = rep(0.2, 5), gamma0 = rep(1.1, 5))
+#'
+#'
+#' \dontrun{
 #' tb <- load_example_data()
 #' em <- em_basic(tb, "Populacao", "n_agencias")
+#' }
+#'
+#' @references
+#' Bresnahan, T. F., & Reiss, P. C. (1991). Entry and competition in concentrated markets. Journal of political economy, 99(5), 977-1009.
+#'
 #' @export
 
-em_basic <- function(data, Sm, y, N_max = 5) {
+em_basic <- function(data, Sm, y, N_max = 5, alpha0 = rep(0.1, N_max), gamma0 = rep(1, N_max)) {
 
     ### to tibble
     data <- dplyr::as_tibble(data)
@@ -47,8 +68,6 @@ em_basic <- function(data, Sm, y, N_max = 5) {
 
 
     # initial conditions ------------------------------------------------------
-    alpha0  <- 0.1*rep(1, N_max)
-    gamma0  <- rep(1, N_max)
     params0 <- c(alpha0, gamma0)
 
 
