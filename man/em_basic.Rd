@@ -27,6 +27,7 @@ A tibble of critical market sizes, as explained in Bresnahan and Reiss (1991)
 Estimate our basic entry model with only one variable for the market size.
 }
 \examples{
+\donttest{
 set.seed(1)
 tb <- data.frame(Sm = runif(10), y = runif(10))
 
@@ -38,7 +39,7 @@ em_n3 <- em_basic(tb, "Sm", "y", N_max = 3)
 
 # estimate model with different initial conditions
 em_difc <- em_basic(tb, "Sm", "y", alpha0 = rep(0.2, 5), gamma0 = rep(1.1, 5))
-
+}
 
 \dontrun{
 tb <- load_example_data()

@@ -24,6 +24,7 @@ A tibble of critical market sizes, as explained in Bresnahan and Reiss (1991)
 Estimate our entry model with two variables for the market size.
 }
 \examples{
+\donttest{
 set.seed(1)
 tb <- data.frame(Sm1 = runif(10), Sm2 = runif(10), y = runif(10))
 
@@ -32,6 +33,7 @@ em_n5 <- em_2var(tb, "Sm1", "Sm2", "y")
 
 # estimate model with 3 competitors only
 em_n3 <- em_2var(tb, "Sm", "Sm2", "y", N_max = 3)
+}
 
 \dontrun{
 tb <- load_example_data()

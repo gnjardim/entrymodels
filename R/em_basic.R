@@ -16,6 +16,7 @@
 #' @importFrom dplyr tibble
 #'
 #' @examples
+#' \donttest{
 #' set.seed(1)
 #' tb <- data.frame(Sm = runif(10), y = runif(10))
 #'
@@ -27,7 +28,7 @@
 #'
 #' # estimate model with different initial conditions
 #' em_difc <- em_basic(tb, "Sm", "y", alpha0 = rep(0.2, 5), gamma0 = rep(1.1, 5))
-#'
+#' }
 #'
 #' \dontrun{
 #' tb <- load_example_data()
