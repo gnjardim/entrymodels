@@ -16,7 +16,7 @@
 #'
 #' @examples
 #' set.seed(1)
-#' tb <- data.frame(Sm1 = runif(100), Sm2 = runif(100), y = runif(100))
+#' tb <- data.frame(Sm1 = runif(10), Sm2 = runif(10), y = runif(10))
 #'
 #' # estimate default model
 #' em_n5 <- em_2var(tb, "Sm1", "Sm2", "y")

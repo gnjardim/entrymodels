@@ -28,7 +28,7 @@ Estimate our basic entry model with only one variable for the market size.
 }
 \examples{
 set.seed(1)
-tb <- data.frame(Sm = runif(100), y = runif(100))
+tb <- data.frame(Sm = runif(10), y = runif(10))
 
 # estimate default model
 em_n5 <- em_basic(tb, "Sm", "y")
