@@ -65,7 +65,7 @@ Which should return something similar to:
 * DONE (entrymodels)
 ```
 
-Please note that you should have [Rtools](http://cran.r-project.org/bin/windows/Rtools/) installed. 
+Please note that you should have [Rtools](https://cran.r-project.org/bin/windows/Rtools/) installed. 
 
 ## Examples
 
@@ -80,7 +80,7 @@ tb <- load_example_data()
 ```
 
 
-### Two-Variables Model
+### Two-Variable Model
 This is a basic example which shows you how to estimate a two-variable entry model with our sample data.
 
 ```{r example2, message = FALSE}

@@ -60,7 +60,7 @@ Which should return something similar to:
 ```
 
 Please note that you should have
-[Rtools](http://cran.r-project.org/bin/windows/Rtools/) installed.
+[Rtools](https://cran.r-project.org/bin/windows/Rtools/) installed.
 
 ## Examples
 
@@ -84,7 +84,7 @@ tb <- load_example_data()
 #> 5             5             162958.
 ```
 
-### Two-Variables Model
+### Two-Variable Model
 
 This is a basic example which shows you how to estimate a two-variable
 entry model with our sample data.
