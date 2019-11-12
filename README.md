@@ -11,7 +11,8 @@ status](https://travis-ci.org/gnjardim/entrymodels.svg?branch=master)](https://t
 <!-- badges: end -->
 
 Tools for measuring empirically the effects of entry in concentrated
-markets, based in Bresnahan and Reiss (1991).
+markets, based in Bresnahan and Reiss (1991)
+<https://www.jstor.org/stable/2937655>.
 
 ## Installation
 

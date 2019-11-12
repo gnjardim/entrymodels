@@ -7,7 +7,7 @@ Authors@R:
 	  person("Arthur", "Bragança", role = "ctb"), 
 	  person("Pedro", "Fernandes", role = "ctb"))
 Maintainer: Guilherme Jardim <gnjardim1@gmail.com>
-Description: Tools for measuring empirically the effects of entry in concentrated markets, based in Bresnahan and Reiss (1991). 
+Description: Tools for measuring empirically the effects of entry in concentrated markets, based in Bresnahan and Reiss (1991) <https://www.jstor.org/stable/2937655>. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
