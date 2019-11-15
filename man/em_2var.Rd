@@ -2,7 +2,7 @@
 % Please edit documentation in R/em_2var.R
 \name{em_2var}
 \alias{em_2var}
-\title{Two-Variables Entry Model}
+\title{Two-Variable Entry Model}
 \usage{
 em_2var(data, Sm1, Sm2, y, N_max = 5)
 }

@@ -24,7 +24,7 @@ em_basic(data, Sm, y, N_max = 5, alpha0 = rep(0.1, N_max),
 A tibble of critical market sizes, as explained in Bresnahan and Reiss (1991)
 }
 \description{
-Estimate our basic entry model with only one variable for the market size.
+Estimate basic entry model with only one variable for the market size.
 }
 \examples{
 tb <- data.frame(Sm = 1:5, y = 1:5)
