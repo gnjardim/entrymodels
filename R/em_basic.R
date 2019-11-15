@@ -17,8 +17,7 @@
 #'
 #' @examples
 #' \donttest{
-#' set.seed(1)
-#' tb <- data.frame(Sm = runif(10), y = runif(10))
+#' tb <- data.frame(Sm = 1:5, y = 1:5)
 #'
 #' # estimate default model
 #' em_n5 <- em_basic(tb, "Sm", "y")

@@ -21,16 +21,15 @@ em_2var(data, Sm1, Sm2, y, N_max = 5)
 A tibble of critical market sizes, as explained in Bresnahan and Reiss (1991)
 }
 \description{
-Estimate our entry model with two variables for the market size.
+Estimate entry model with two variables for the market size.
 }
 \examples{
-\donttest{
-set.seed(1)
-tb <- data.frame(Sm1 = runif(10), Sm2 = runif(10), y = runif(10))
+tb <- data.frame(Sm1 = 1:5, Sm2 = 1:5, y = 1:5)
 
 # estimate default model
 em_n5 <- em_2var(tb, "Sm1", "Sm2", "y")
 
+\donttest{
 # estimate model with 3 competitors only
 em_n3 <- em_2var(tb, "Sm", "Sm2", "y", N_max = 3)
 }

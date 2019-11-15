@@ -1,5 +1,5 @@
 #' Two-Variables Entry Model
-#' @description Estimate our entry model with two variables for the market size.
+#' @description Estimate entry model with two variables for the market size.
 #'
 #' @param data A \code{data.frame} object containing your data
 #' @param Sm1 A string indicating the main market size variable, present in \code{data}
@@ -15,13 +15,12 @@
 #' @importFrom dplyr tibble
 #'
 #' @examples
-#' \donttest{
-#' set.seed(1)
-#' tb <- data.frame(Sm1 = runif(10), Sm2 = runif(10), y = runif(10))
+#' tb <- data.frame(Sm1 = 1:5, Sm2 = 1:5, y = 1:5)
 #'
 #' # estimate default model
 #' em_n5 <- em_2var(tb, "Sm1", "Sm2", "y")
 #'
+#'\donttest{
 #' # estimate model with 3 competitors only
 #' em_n3 <- em_2var(tb, "Sm", "Sm2", "y", N_max = 3)
 #' }
