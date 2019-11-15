@@ -29,10 +29,8 @@ tb <- data.frame(Sm1 = 1:5, Sm2 = 1:5, y = 1:5)
 # estimate default model
 em_n5 <- em_2var(tb, "Sm1", "Sm2", "y")
 
-\donttest{
 # estimate model with 3 competitors only
 em_n3 <- em_2var(tb, "Sm", "Sm2", "y", N_max = 3)
-}
 
 \dontrun{
 tb <- load_example_data()

@@ -32,13 +32,11 @@ tb <- data.frame(Sm = 1:5, y = 1:5)
 # estimate default model
 em_n5 <- em_basic(tb, "Sm", "y")
 
-\donttest{
 # estimate model with 3 competitors only
 em_n3 <- em_basic(tb, "Sm", "y", N_max = 3)
 
 # estimate model with different initial conditions
 em_difc <- em_basic(tb, "Sm", "y", alpha0 = rep(0.2, 5), gamma0 = rep(1.1, 5))
-}
 
 \dontrun{
 tb <- load_example_data()

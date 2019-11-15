@@ -1,6 +1,7 @@
 ## Resubmission
 This is a resubmission. In this version I have:
 * Fixed references in the form "authors (year) <https:...>".
+* Fixed more than 5s examples.
 
 ## Test environments
 * local OS X install, R 3.6.1
