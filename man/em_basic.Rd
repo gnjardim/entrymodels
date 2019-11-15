@@ -27,12 +27,12 @@ A tibble of critical market sizes, as explained in Bresnahan and Reiss (1991)
 Estimate our basic entry model with only one variable for the market size.
 }
 \examples{
-\donttest{
 tb <- data.frame(Sm = 1:5, y = 1:5)
 
 # estimate default model
 em_n5 <- em_basic(tb, "Sm", "y")
 
+\donttest{
 # estimate model with 3 competitors only
 em_n3 <- em_basic(tb, "Sm", "y", N_max = 3)
 
