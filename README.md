@@ -6,7 +6,9 @@
 <!-- badges: start -->
 
 [![CRAN
-version](https://www.r-pkg.org/badges/version/entrymodels)](https://cran.r-project.org/package=entrymodels)
+version](https://www.r-pkg.org/badges/version/entrymodels?color=orange)](https://cran.r-project.org/package=entrymodels)
+[![CRAN
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/entrymodels?color=blue)](https://cran.r-project.org/package=entrymodels)
 [![Travis build
 status](https://travis-ci.org/gnjardim/entrymodels.svg?branch=master)](https://travis-ci.org/gnjardim/entrymodels)
 <!-- badges: end -->
