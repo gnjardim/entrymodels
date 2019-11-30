@@ -107,3 +107,22 @@ tb <- load_example_data()
 #> 4             4              79959.
 #> 5             5             169059.
 ```
+
+## Citation
+
+To cite package `entrymodels` in publications use:
+
+Guilherme N. Jardim (2019) entrymodels. R package version 0.1.0
+<https://CRAN.R-project.org/package=entrymodels>
+
+A BibTeX entry for LaTeX users is:
+
+``` 
+  @Manual{entrymodels,
+    title = {entrymodels},
+    author = {Guilherme {N. Jardim}},
+    year = {2019},
+    note = {R package version 0.1.0},
+    url = {https://CRAN.R-project.org/package=entrymodels},
+  }
+```
