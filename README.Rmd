@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# entrymodels
+# entrymodels: Estimate Entry Models
 
 <!-- badges: start -->
 [![CRAN version](https://www.r-pkg.org/badges/version/entrymodels?color=orange)](https://cran.r-project.org/package=entrymodels)
@@ -21,11 +21,11 @@ knitr::opts_chunk$set(
 [![Travis build status](https://travis-ci.org/gnjardim/entrymodels.svg?branch=master)](https://travis-ci.org/gnjardim/entrymodels)
 <!-- badges: end -->
 
-Tools for measuring empirically the effects of entry in concentrated markets, based in Bresnahan and Reiss (1991) <https://www.jstor.org/stable/2937655>. 
+Tools for measuring empirically the effects of entry in concentrated markets, based in [Bresnahan and Reiss (1991)](https://www.jstor.org/stable/2937655). 
 
 ## Installation
 
-You can install the released version of `entrymodels` from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of `entrymodels` from [CRAN](https://CRAN.R-project.org/package=entrymodels) with:
 
 ``` r
 install.packages("entrymodels")
@@ -39,7 +39,7 @@ devtools::install_github("gnjardim/entrymodels")
 ```
 Which should return something similar to:
 
-``` r
+```
 * installing *source* package 'entrymodels' ...
 ** using staged installation
 ** R
@@ -68,7 +68,7 @@ Which should return something similar to:
 
 Please note that you should have [Rtools](https://cran.r-project.org/bin/windows/Rtools/) installed. 
 
-## Examples
+## Examples 
 
 ### Basic Model
 This is a basic example which shows you how to estimate a basic entry model with our sample data.
@@ -95,17 +95,16 @@ tb <- load_example_data()
 
 To cite package `entrymodels` in publications use:
 
-  Guilherme N. Jardim (2019) entrymodels. R package version 0.1.0
-  <https://CRAN.R-project.org/package=entrymodels>
+  > Guilherme N. Jardim (2019) entrymodels: Estimate Entry Models. R package version 0.1.1 <https://CRAN.R-project.org/package=entrymodels>
 
 A BibTeX entry for LaTeX users is:
 
 ```
   @Manual{entrymodels,
-    title = {entrymodels},
+    title = {entrymodels: Estimate Entry Models},
     author = {Guilherme {N. Jardim}},
     year = {2019},
-    note = {R package version 0.1.0},
+    note = {R package version 0.1.1},
     url = {https://CRAN.R-project.org/package=entrymodels},
   }
 ```
