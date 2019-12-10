@@ -110,8 +110,9 @@ tb <- load_example_data()
 
 To cite package `entrymodels` in publications use:
 
-> Guilherme N. Jardim (2019) entrymodels: Estimate Entry Models. R
-> package version 0.1.1 <https://CRAN.R-project.org/package=entrymodels>
+> Guilherme N. Jardim (2019). entrymodels: Estimate Entry Models. R
+> package version 0.1.1.
+> <https://CRAN.R-project.org/package=entrymodels>
 
 A BibTeX entry for LaTeX users is:
 
