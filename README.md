@@ -19,7 +19,7 @@ markets, based in Bresnahan and Reiss (1991)
 
 ## Installation
 
-You can install the released version of entrymodels from
+You can install the released version of `entrymodels` from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
