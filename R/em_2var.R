@@ -6,6 +6,8 @@
 #' @param Sm2 A string indicating the second market size variable, present in \code{data}
 #' @param y A string indicating the outcome variable, present in \code{data}
 #' @param N_max An \code{integer} indicating the maximum number of competitors. Defaults to 5.
+#' @param alpha0 A \code{vector} of type \code{numeric} and length \code{N_max} indicating the initial condition for alpha. Defaults to a vector of 0.1's.
+#' @param gamma0 A \code{vector} of type \code{numeric} and length \code{N_max} indicating the initial condition for gamma. Defaults to a vector of 1's.
 #' @return A tibble with critical market sizes and estimated parameters, as explained in Bresnahan and Reiss (1991)
 #'
 #' @import stats
@@ -21,7 +23,11 @@
 #' em_n5 <- em_2var(tb, "Sm1", "Sm2", "y")
 #'
 #' # estimate model with 3 competitors only
-#' em_n3 <- em_2var(tb, "Sm", "Sm2", "y", N_max = 3)
+#' em_n3 <- em_2var(tb, "Sm1", "Sm2", "y", N_max = 3)
+#'
+#' # estimate model with different initial conditions
+#' em_difc <- em_2var(tb, "Sm1", "Sm2", "y", alpha0 = rep(0.2, 5), gamma0 = rep(1.1, 5))
+#'
 #'
 #' \dontrun{
 #' tb <- load_example_data()
@@ -35,7 +41,8 @@
 #'
 #' @export
 
-em_2var <- function(data, Sm1, Sm2, y, N_max = 5) {
+em_2var <- function(data, Sm1, Sm2, y, N_max = 5,
+                    alpha0 = rep(0.1, N_max), gamma0 = rep(1, N_max)) {
 
     ### to tibble
     data <- dplyr::as_tibble(data)
@@ -64,8 +71,6 @@ em_2var <- function(data, Sm1, Sm2, y, N_max = 5) {
 
     # initial conditions ------------------------------------------------------
     k <- 2
-    alpha0  <- rep(0.1, N_max)
-    gamma0  <- rep(1, N_max)
     params0 <- c(alpha0, gamma0)
 
 
