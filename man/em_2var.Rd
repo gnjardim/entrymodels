@@ -18,7 +18,7 @@ em_2var(data, Sm1, Sm2, y, N_max = 5)
 \item{N_max}{An \code{integer} indicating the maximum number of competitors. Defaults to 5.}
 }
 \value{
-A tibble of critical market sizes, as explained in Bresnahan and Reiss (1991)
+A tibble with critical market sizes and estimated parameters, as explained in Bresnahan and Reiss (1991)
 }
 \description{
 Estimate entry model with two variables for the market size.

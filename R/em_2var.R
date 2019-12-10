@@ -6,7 +6,7 @@
 #' @param Sm2 A string indicating the second market size variable, present in \code{data}
 #' @param y A string indicating the outcome variable, present in \code{data}
 #' @param N_max An \code{integer} indicating the maximum number of competitors. Defaults to 5.
-#' @return A tibble of critical market sizes, as explained in Bresnahan and Reiss (1991)
+#' @return A tibble with critical market sizes and estimated parameters, as explained in Bresnahan and Reiss (1991)
 #'
 #' @import stats
 #' @importFrom magrittr %>%
@@ -122,7 +122,9 @@ em_2var <- function(data, Sm1, Sm2, y, N_max = 5) {
 
     S_critical_restricted2 <- dplyr::tibble(n_competitors   = 1:N_max,
                                             critical_values = exp(gamma_star_restricted2/alpha_star_restricted2 -
-                                                                  br.restricted2$par[2*N_max + 1]*mean(S2))
+                                                                  br.restricted2$par[2*N_max + 1]*mean(S2)),
+                                            alpha           = alpha_star_restricted2,
+                                            gamma           = gamma_star_restricted2
                                             )
 
 
