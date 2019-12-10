@@ -27,6 +27,7 @@
 #' # estimate model with different initial conditions
 #' em_difc <- em_basic(tb, "Sm", "y", alpha0 = rep(0.2, 5), gamma0 = rep(1.1, 5))
 #'
+#'
 #' \dontrun{
 #' tb <- load_example_data()
 #' em <- em_basic(tb, "Populacao", "n_agencias")
