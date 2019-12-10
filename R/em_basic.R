@@ -7,7 +7,7 @@
 #' @param N_max An \code{integer} indicating the maximum number of competitors. Defaults to 5.
 #' @param alpha0 A \code{vector} of type \code{numeric} and length \code{N_max} indicating the initial condition for alpha. Defaults to a vector of 0.1's.
 #' @param gamma0 A \code{vector} of type \code{numeric} and length \code{N_max} indicating the initial condition for gamma. Defaults to a vector of 1's.
-#' @return A tibble of critical market sizes, as explained in Bresnahan and Reiss (1991)
+#' @return A tibble with critical market sizes and estimated parameters, as explained in Bresnahan and Reiss (1991)
 #'
 #' @import stats
 #' @importFrom magrittr %>%
@@ -92,8 +92,11 @@ em_basic <- function(data, Sm, y, N_max = 5, alpha0 = rep(0.1, N_max), gamma0 = 
 
     alpha_star_restricted1 <- A1%*%br.restricted1$par[1:N_max]
     gamma_star_restricted1 <- A2%*%br.restricted1$par[(N_max+1):(length(br.restricted1$par))]
-    S_critical_restricted1 <- dplyr::tibble(n_competitors   = 1:N_max,
-                                            critical_values = exp(gamma_star_restricted1/alpha_star_restricted1)
-                                            )
+    em_out <- dplyr::tibble(n_competitors   = 1:N_max,
+                            critical_values = exp(gamma_star_restricted1/alpha_star_restricted1),
+                            alpha           = alpha_star_restricted1,
+                            gamma           = gamma_star_restricted1
+                            )
+
 
 }
