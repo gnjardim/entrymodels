@@ -1,2 +1,2 @@
-# entrymodels 0.1.1
+# entrymodels 0.2.0
 * Added estimated parameters in returned tibbles.
