@@ -8,7 +8,7 @@
 [![CRAN
 version](https://www.r-pkg.org/badges/version/entrymodels?color=orange)](https://cran.r-project.org/package=entrymodels)
 [![CRAN
-downloads](https://cranlogs.r-pkg.org/badges/grand-total/entrymodels?color=blue)](https://cran.r-project.org/package=entrymodels)
+downloads](https://cranlogs.r-pkg.org/badges/entrymodels?color=blue)](https://cran.r-project.org/package=entrymodels)
 [![Travis build
 status](https://travis-ci.org/gnjardim/entrymodels.svg?branch=master)](https://travis-ci.org/gnjardim/entrymodels)
 <!-- badges: end -->
@@ -110,7 +110,7 @@ tb <- load_example_data()
 
 To cite package `entrymodels` in publications use:
 
-> Guilherme N. Jardim (2019). entrymodels: Estimate Entry Models. R
+> Guilherme N. Jardim (2020). entrymodels: Estimate Entry Models. R
 > package version 0.2.0.
 > <https://CRAN.R-project.org/package=entrymodels>
 
@@ -120,7 +120,7 @@ A BibTeX entry for LaTeX users is:
   @Manual{entrymodels,
     title = {entrymodels: Estimate Entry Models},
     author = {Guilherme {N. Jardim}},
-    year = {2019},
+    year = {2020},
     note = {R package version 0.2.0},
     url = {https://CRAN.R-project.org/package=entrymodels},
   }
