@@ -1,7 +1,7 @@
 Package: entrymodels
 Type: Package
 Title: Estimate Entry Models
-Version: 0.2.0
+Version: 0.2.1
 Authors@R:
     c(person("Guilherme", "Jardim", email = "gnjardim1@gmail.com", role = c("aut", "cre")), 
 	  person("Arthur", "Bragança", role = "ctb"), 

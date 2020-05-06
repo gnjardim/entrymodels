@@ -40,7 +40,19 @@
 #'
 #' @export
 
-em_basic <- function(data, Sm, y, N_max = 5, alpha0 = rep(0.1, N_max), gamma0 = rep(1, N_max)) {
+em_basic <- function(data, Sm, y, N_max = 5,
+                     alpha0 = rep(0.1, N_max),
+                     gamma0 = rep(1, N_max)) {
+
+    # check arguments ---------------------------------------------------------
+    if (!is.character(Sm) | !is.character(y)) {
+        stop("Arguments 'Sm1', 'Sm2' and 'y' must be strings.")
+    }
+
+    if (N_max < 1 | N_max%%1 != 0) {
+        stop("'N_max' must be an integer larger than 0")
+    }
+
 
     ### to tibble
     data <- dplyr::as_tibble(data)
